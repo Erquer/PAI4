@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function edit() {
+            $('button').trigger('asdf');
+           // const row = $(this);
+           // row.html('<input id="edit" value="' + row.html() + '">');
+           //  $('#edit').blur( () =>{
+           //      row.text($(this).val());
+           //      row.one('click', edit);
+           //  }).focus();
+
+        }
+        $(function () {
+            $('td').one('click', edit);
+            $('button').bind('asdf', function () { alert('Asdf!'); });
+            $('*').unbind();
+        });
+
+
+    </script>
+</head>
+<body>
+<table>
+    <tr><td>Wlazł</td></tr>
+    <tr><td>kotek</td></tr>
+    <tr><td>na</td></tr>
+    <tr><td><button type="button">Button</button></td></tr>
+</table>
+
+</body>
+</html>

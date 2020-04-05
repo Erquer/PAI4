@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>.zielona{background: Pink;}</style>
+    <title>Title</title>
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('button:contains(\'Zielony\')').click(function () {
+                $('#classic').addClass('zielona');
+            });
+            $('button:contains(\'mosteczek\')').click(function () {
+                $('#classic').removeClass('zielona');
+            });
+            $('button:contains(\'ugina\')').click(function () {
+                $('#toggle').toggleClass('zielona');
+            });
+            $('tr:even').addClass('zielona');
+
+            $('li.a a:not(.b)').css('border', '1px solid red');
+
+        });
+    </script>
+</head>
+<body>
+<table>
+    <tr><td>Pierwszy</td></tr>
+    <tr><td>Drugi</td></tr>
+    <tr><td>Trzeci</td></tr>
+    <tr><td>Czwarty</td></tr>
+    <tr><td>Piąty</td></tr>
+    <tr><td>Szósty</td></tr>
+</table>
+<ul >
+    <li class="a" ><a >Link do Selektorów bez klasy</a></li>
+    <li class="a"><a class="b" >Link do Selektorów z klasą</a></li>
+    <li class="a"><a>Link do niczego bez klasy</a></li>
+    <li class="a"><a class="b">Link do niczego z klasą</a></li>
+</ul>
+<div><button>Zielony</button><button>mosteczek</button><span id="classic">Zmiana
+przez dodawanie/usuwanie klasy.</span></div>
+<div><button>ugina się.</button><span id="toggle">Zmiana przez przełączanie
+klas.</span></div>
+</body>
+</html>
